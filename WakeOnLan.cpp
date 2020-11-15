@@ -28,7 +28,7 @@ void WakeOnLan::send(byte* mac, byte port, EthernetUDP udp) {
 
     udp.beginPacket(_ip, port);
 	
-    udp.write(preamble, sizeof preamble);
+    udp.write(preamble, 6);
     
     for (i = 0; i < 16; i++)
 	
